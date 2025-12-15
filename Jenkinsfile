@@ -29,6 +29,15 @@ pipeline {
             }
         }
 
+        stage('Configure ALLOWED_HOSTS') {
+            steps {
+                sh '''
+                . venv/bin/activate
+                sed -i "s/^ALLOWED_HOSTS = .*/ALLOWED_HOSTS = ['192.168.116.135', 'localhost', '127.0.0.1']/" gestion_absence/settings.py
+                '''
+            }
+        }
+
         stage('Deploy') {
             steps {
                 sh '''
