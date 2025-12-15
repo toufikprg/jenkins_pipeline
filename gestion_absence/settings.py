@@ -80,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'gestion_absence_presence',
-        'USER': 'django_user',
-        'PASSWORD': 'StrongPassword123',
+        'USER': 'django_user',          
+        'PASSWORD': 'StrongPassword123', 
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
